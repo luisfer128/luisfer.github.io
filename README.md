@@ -1,2 +1,2 @@
-# luisfer128.girhub.io
+# luisfer128.github.io
 Grupo 7 - Muebleria
