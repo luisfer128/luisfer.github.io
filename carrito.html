@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Baldeon Silva Luis">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="imagenes/EL-sapito.webp">
+    <title>Carrito|EL SAPITO</title>
+    <style>
+        .producto {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .producto img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+
+        .info-producto {
+            flex: 1; /* La información del producto ocupará el espacio restante */
+        }
+
+        .eliminar {
+            background-color: #ff3b30;
+            color: #fff;
+            border: none;
+            padding: 4px 8px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .comprar {
+            background-color: #007aff;
+            color: #fff;
+            margin-top: 4px;
+            border: none;
+            padding: 5px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contenedor {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            vertical-align: top;
+            margin: 0px auto 40px;
+            align-items: flex-start;
+        }
+
+        .productos {
+            background-color: #fff;
+            margin-top: 15px;
+            margin-left: 40px;
+            margin-right: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .total-y-pago {
+            background-color: #fff;
+            margin-top: 15px;
+            margin-right: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .total {
+            margin-top: 20px;
+        }
+
+        .metodo-pago {
+            margin-top: 20px;
+        }
+
+        select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        li{
+            list-style: none;
+        }
+
+        .checkout{
+            padding: 0 30px 10px;
+            border-bottom: 1px solid #fff;
+            margin-bottom: 0;
+        }
+
+        .checkout>li{
+            display: flex;
+            font-size: 1.2rem;
+        }
+
+        .checkout>li>strong{
+            font-size: 1rem;
+            flex: 1;
+            text-align: right;
+        }
+
+        .producto-nombre {
+            flex: 1;
+            text-align: left;
+        }
+
+        .precio {
+            white-space: nowrap;
+            margin-left: 20px; /* Agrega un margen izquierdo para separar el precio del nombre del producto */
+        }
+        /* Estilos flex */
+
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .flex-item {
+            flex: 0 0 calc(50% - 40px);
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos para la segunda estrategia de maquetación (grid) */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 20px;
+            justify-content: center;
+        }
+
+        .grid-item {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="home.html" class="empresa">
+            <img class="logo" alt="logo-empresa" src="imagenes/EL-sapito.webp">
+            <h2 class="nombre-empresa">Muebleria El sapito</h2>
+        </a>
+        <nav class="nav-item">
+            <a href="home.html" class="headeritem">Inicio</a>
+            <a href="muebles.html" class="headeritem">Muebles</a>
+            <a href="comedores.html" class="headeritem">Comedores</a>
+            <a href="armario.html" class="headeritem">Armarios</a>
+            <a href="pedidoproducto.html" class="headeritem">Pedido Personalizado</a>
+            <a href="ingreso.html" class="headeritem">Iniciar Sesion</a>
+            <a href="carrito.html" class="carrito1">
+                <img class="carrocompra" alt="carrito-compra" src="imagenes/carrito-de-compra.webp">
+            </a>
+        </nav>
+    </header>
+
+    <!-- Carrito de Compras -->
+    <div class="contenedor">
+        <div class="productos">
+
+            <div class="producto">
+                <img src="imagenes/armarios/ArmarioBrixton.webp" alt="Armario Brixton">
+                <div class="info-producto">
+                    <h3>Armario Brixton</h3>
+                    <p>$999</p>
+                    <button class="eliminar">Eliminar</button>
+                </div>
+            </div>
+    
+            <div class="producto">
+                <img src="imagenes/armarios/ArmarioPanama.webp" alt="Armario Panamá">
+                <div class="info-producto">
+                    <h3>Armario Panamá</h3>
+                    <p>$1299</p>
+                    <button class="eliminar">Eliminar</button>
+                </div>   
+            </div>
+    
+            <div class="producto">
+                <img src="./imagenes/comedores/SIRENAMARMOLEADO6-GRISMEDIO.webp" alt="Comedor burgos de 4 sillas">
+                <div class="info-producto">
+                    <h3>Comedor burgos de 4 sillas</h3>
+                    <p>$999</p>
+                    <button class="eliminar">Eliminar</button>
+                </div>      
+            </div>
+    
+            <div class="producto">
+                <img src="./imagenes/comedores/PINO-VALENCIAVIDRIO4-BEIGE.webp" alt="Comedor Pino de 4 sillas">
+                <div class="info-producto">
+                    <h3>Comedor Pino de 4 sillas</h3>
+                    <p>$999</p>
+                    <button class="eliminar">Eliminar</button>
+                </div>       
+            </div>
+    
+        </div>
+
+        <div class="total-y-pago">
+            <div class="pago" id="pago">
+                <ul class="checkout" id="checkout">
+                    <li>
+                        Armario Brixton
+                        <strong>
+                            <span class="precio">$999</span>
+                        </strong>
+                    </li>
+                    <li>
+                        Armario Panamá
+                        <strong>
+                            <span class="precio">$1299</span>
+                        </strong>
+                    </li>
+                    <li>
+                        Comedor burgos
+                        <strong>
+                            <span class="precio">$999</span>
+                        </strong>
+                    </li>
+                    <li>
+                        Comedor Pino
+                        <strong>
+                            <span class="precio">$999</span>
+                        </strong>
+                    </li>
+                    <li>
+                        ‎ 
+                    </li>
+                    <li >
+                        Impuestos
+                        <strong>
+                            <span class="precio">$515.50</span>
+                        </strong>
+                    </li>
+                    <li>
+                        Envio
+                        <strong>
+                            <span class="precio">$105.50</span>
+                        </strong>
+                    </li>
+                </ul>                
+                <h3 class="total" id="total">Total: $4917</h3>
+            </div>
+
+            <div class="metodo-pago">
+                <label for="metodoPago">Seleccione el método de pago:</label>
+                <select id="metodoPago">
+                    <option value="" disabled selected>Selecciona un producto</option>
+                    <option value="tarjeta">Tarjeta de Crédito</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="efectivo">Efectivo</option>
+                </select>
+            </div>
+
+            <button class="comprar">Comprar</button>
+        </div>
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <img class="logo" alt="logo-empresa" src="imagenes/EL-sapito.webp">
+        <nav class="footernav">
+            <ul>
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="muebles.html">Muebles</a></li>
+                <li><a href="comedores.html">Comedores</a></li>
+                <li><a href="armario.html">Armarios</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+        <p class="desarrollado">Copyright &copy;2023 Diseñado por el Grupo 7</p>
+    </footer>
+
+    <script type="text/javascript">
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Obtener referencia a los botones de eliminar
+            var eliminarBotones = document.querySelectorAll('.eliminar');
+
+            function eliminarProductoCheckout(nombreProducto) {
+                var checkoutItems = document.querySelectorAll('.checkout>li');
+                checkoutItems.forEach(function (item) {
+                    var productoNombre = item.textContent.trim();
+                    console.log('Comparando:', productoNombre.toLowerCase(), nombreProducto.toLowerCase());
+                    if (productoNombre.toLowerCase() === nombreProducto.toLowerCase()) {
+                        console.log('Eliminando:', productoNombre);
+                        item.remove();
+                    }
+                });
+            }
+
+            // Agregar un listener a cada botón de eliminar
+            eliminarBotones.forEach(function (boton) {
+                boton.addEventListener('click', function () {
+                    // Obtener el elemento padre (producto) y eliminarlo
+                    var producto = this.closest('.producto');
+                    producto.remove();
+
+                    // Eliminar el elemento correspondiente al producto del checkout
+                    var nombreProducto = producto.querySelector('h3').textContent;
+                    eliminarProductoCheckout(nombreProducto);
+
+                    // Llamar a la función de actualizar total
+                    actualizarTotal();
+                });
+            });
+        
+
+            // Función para actualizar el total
+            function actualizarTotal() {
+                // Obtener todos los precios de los productos
+                var precios = document.querySelectorAll('.precio');
+
+                // Calcular el total sumando todos los precios
+                var total = 0;
+                precios.forEach(function (precio) {
+                    total += parseFloat(precio.textContent.replace('$', '')) || 0;
+                });
+
+                // Actualizar el elemento HTML con el nuevo total
+                document.querySelector('.total h3').textContent = 'Total: $' + total.toFixed(2);
+            }
+
+            function getSelectedMethod() {
+                let select = document.getElementById("metodoPago");
+                let selectedOption = select.options[select.selectedIndex];
+                return selectedOption.value;
+            }
+
+            function validatePaymentMethod() {
+                let selectedValue = getSelectedMethod();
+                if (selectedValue !== "") {
+                    alert("Compra exitosa. Muchas gracias por su compra.");
+                } else {
+                    alert("Por favor, seleccione un método de pago válido.");
+                }
+            }
+
+            // Agregar listener al botón de comprar
+            var comprarBoton = document.querySelector('.comprar');
+            comprarBoton.addEventListener('click', function () {
+                validatePaymentMethod()
+            });          
+        });
+        
+    </script>
+</body>
+</html>

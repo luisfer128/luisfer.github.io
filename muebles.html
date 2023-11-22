@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Cedeño Paredes Romina">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="imagenes/EL-sapito.webp">
+    <title>Muebles|EL SAPITO</title>
+    <style>
+    /*productos*/
+
+    .container-items{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
+
+    .item{
+        border-radius: 10px;
+        background-color: #ffffff;
+    }
+
+    .item:hover{
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    }
+
+    .info-product{
+        padding: 15px 30px;
+        line-height: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .item img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+        transition: all .5s;
+    }
+
+    .item figure{
+        overflow: hidden;
+    }
+
+    .item:hover img{
+        transform: scale(1.2);
+    }
+
+    .price{
+        font-size: 18px;
+        font-weight: 900;
+    }
+
+    .info-product button{
+        border: none;
+        background: none;
+        background-color: rgb(0, 0, 0);
+        color:#ffffff;
+        padding: 15px 10px;
+        cursor: pointer;
+    }
+
+    h3{
+        text-align: center;
+        font-style: italic;
+    }
+
+    h1{
+        display: flex;
+        justify-content: center;
+    }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="home.html" class="empresa">
+            <img class="logo" alt="logo-empresa" src="imagenes/EL-sapito.webp">
+            <h2 class="nombre-empresa">Muebleria El sapito</h2>
+        </a>
+        <nav class="nav-item">
+            <a href="home.html" class="headeritem">Inicio</a>
+            <a href="muebles.html" class="headeritem">Muebles</a>
+            <a href="comedores.html" class="headeritem">Comedores</a>
+            <a href="armario.html" class="headeritem">Armarios</a>
+            <a href="pedidoproducto.html" class="headeritem">Pedido Personalizado</a>
+            <a href="ingreso.html" class="headeritem">Iniciar Sesion</a>
+            <a href="carrito.html" class="carrito">
+                <img class="carrocompra" alt="carrito-compra" src="imagenes/carrito-de-compra.webp">
+            </a>
+        </nav>
+        
+    </header>
+
+        <h1>MUEBLES</h1>
+
+        <div class="container-items">
+            <div class="item">
+                <figure>
+                    <img src="https://www.elmueble.com/medio/2023/05/18/00531260_00000000_55f91280_230518133411_900x900.jpg" alt="muebles">
+
+                </figure>
+            <div class="info-product">
+                <h2> Muebles Playeros</h2>
+                <h3> Juego de 2 muebles perfectos para tu casa de playa.</h3>
+                <p class="price">$200</p>
+                <button>Añadir al carrito</button>
+            </div> 
+            </div>
+            <div class="item">
+                <figure>
+                    <img src="https://tiaecuador.vtexassets.com/arquivos/ids/211392-800-auto?v=638157112582400000&width=800&height=auto&aspect=true" alt="juego de sala">
+                </figure>
+            <div class="info-product">
+                <h2> Juego de sala</h2>
+                <h3> Mueble grande + butaca con mesa de centro.</h3>
+                <p class="price">$250</p>
+                <button>Añadir al carrito</button>
+            </div> 
+            </div>
+            <div class="item">
+                <figure>
+                    <img src="https://madisonstore.com.pa/wp-content/uploads/stevens-muebleria_065.jpg" alt="juego de dormitorio">
+
+                </figure>
+            <div class="info-product">
+                <h2> Muebles de dormitorio</h2>
+                <h3> Butaca grande + cama de dos plazas y media.</h3>
+                <p class="price">$600</p>
+                <button>Añadir al carrito</button>
+            </div> 
+            </div>
+            <div class="item">
+                <figure>
+                    <img src="https://www.hogarmania.com/archivos/202205/descubre-los-muebles-esenciales-para-decorar-la-entrada-de-la-casa-1-1280x720x80xX.jpg" alt="entrada">
+
+                </figure>
+            <div class="info-product">
+                <h2> Mueble de entrada</h2>
+                <h3> Perfecto para recibir a tus invitados.</h3>
+                <p class="price">$199</p>
+                <button>Añadir al carrito</button>
+            </div> 
+            </div>
+            <div class="item">
+                <figure>
+                    <img src="https://www.febalcasa.com/wp-content/uploads/2020/07/Febal-Casa-Sistema-Giorno-Diciotto-living-009-1080x648.jpg" alt="mueble para tv">
+
+                </figure>
+            <div class="info-product">
+                <h2> Mueble para TV</h2>
+                <h3> Mueble flotante para tv con espacios para decoraciones.</h3>
+                <p class="price">$399</p>
+                <button>Añadir al carrito</button>
+            </div> 
+            </div>
+            <div class="item">
+                <figure>
+                    <img src="https://clavesdeco.puraciudad.com.ar/wp-content/uploads/2018/03/5-como-decorar-salas-con-adornos-de-madera-24456-1.jpg" alt="mueble de decoración">
+
+                </figure>
+            <div class="info-product">
+                <h2> Repisas Decorativas</h2>
+                <h3> Perfecto para tus decoraciones de hogar, estudio y más.</h3>
+                <p class="price">$170</p>
+                <button>Añadir al carrito</button>
+            </div> 
+            </div>
+        </div>
+
+    <!-- Footer -->
+    <footer>
+        <img class="logo" alt="logo-empresa" src="imagenes/EL-sapito.webp">
+        <nav class="footernav">
+            <ul>
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="muebles.html">Muebles</a></li>
+                <li><a href="comedores.html">Comedores</a></li>
+                <li><a href="armario.html">Armarios</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+        <p class="desarrollado">Copyright &copy;2023 Diseñado por el Grupo 7</p>
+    </footer>
+</body>
+</html>

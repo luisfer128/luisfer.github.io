@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yagual Villalva Alexis">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="imagenes/EL-sapito.webp">
+    <title>Armarios|EL SAPITO</title>
+    <style>
+        .armario {
+            position: relative;
+            width: 220px;
+            height: 400px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 120px;
+            display: inline-block;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .title-armario{
+            display: flex;
+            justify-content: center;   
+            margin: 10px 0;
+        }
+
+        .descuento {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff0000;
+            color: #ffffff;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .oferta {
+            color: red;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .antes {
+            color: black;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .armario img {
+            max-width: 100%;
+            max-height: 50%;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .boton-agregar {
+            background-color: red;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .boton-tienda {
+            background-color: orange;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="home.html" class="empresa">
+            <img class="logo" alt="logo-empresa" src="imagenes/EL-sapito.webp">
+            <h2 class="nombre-empresa">Muebleria El sapito</h2>
+        </a>
+        <nav class="nav-item">
+            <a href="home.html" class="headeritem">Inicio</a>
+            <a href="muebles.html" class="headeritem">Muebles</a>
+            <a href="comedores.html" class="headeritem">Comedores</a>
+            <a href="armario.html" class="headeritem">Armarios</a>
+            <a href="pedidoproducto.html" class="headeritem">Pedido Personalizado</a>
+            <a href="ingreso.html" class="headeritem">Iniciar Sesion</a>
+            <a href="carrito.html" class="carrito">
+                <img class="carrocompra" alt="carrito-compra" src="imagenes/carrito-de-compra.webp">
+            </a>
+        </nav>
+    </header>
+    <div class="content">
+        <!-- Aquí va el contenido de la página web -->
+        <h1 class="title-armario">Armarios</h1>
+    <!-- 1 conjunto de armarios -->
+    <div class="items-armario">
+    <div class="armario">
+        <div class="descuento">-36%</div>
+        <h2>Armario Panamá</h2>
+        <img src="imagenes/armarios/ArmarioPanama.webp" alt="Armario Panamá">
+        <p class="oferta">Oferta web: $189</p>
+        <p class="antes">Antes: $294</p>
+        <p>18 cuotas: $11.88</p>
+        <button class="boton-agregar">Agregar al carrito</button>
+    </div>
+
+    <!-- 2 conjunto de armarios -->
+    <div class="armario">
+        <div class="descuento">-30%</div>
+        <h2>Armario Brixton| Roble Claro 2.2</h2>
+        <img src="imagenes/armarios/ArmarioBrixton.webp" alt="Armario Brixton">
+        <p class="oferta">Oferta web: $245</p>
+        <p class="antes">Antes: $420</p>
+        <p>18 cuotas: $20.42</p>
+        <button class="boton-agregar">Agregar al carrito</button>
+    </div>
+
+    <!-- 3 conjunto de armarios -->
+    <div class="armario">
+        <div class="descuento">-20%</div>
+        <h2>Armario el Dorado| Castaño Vainilla 5.3 - Castaño/Vainilla</h2>
+        <img src="imagenes/armarios/ArmarioDorado.webp" alt="Armario el Dorado">
+        <p class="oferta">Oferta web: $371</p>
+        <p class="antes">Antes: $464</p>
+        <p>18 cuotas: $23.33</p>
+        <button class="boton-agregar">Agregar al carrito</button>
+    </div>
+
+    <!-- 4 conjunto de armarios -->
+    <div class="armario">
+        <div class="descuento">-20%</div>
+        <h2>Armario Baldu| Nogueira 6.2</h2>
+        <img src="imagenes/armarios/ArmarioBaldu.webp" alt="Armario Baldu">
+        <p class="oferta">Oferta web: $267.20</p>
+        <p class="antes">Antes: $334</p>
+        <p>18 cuotas: $16.79</p>
+        <button class="boton-agregar">Agregar al carrito</button>
+    </div>
+
+    <!-- 5 conjunto de armarios -->
+    <div class="armario">
+        <div class="descuento">-37%</div>
+        <h2>Armario Flash II| Blanco Rosa 6.2 - Blanco/Rosa</h2>
+        <img src="imagenes/armarios/ArmarioFlash.webp" alt="Armario Flash">
+        <p class="oferta">Oferta web: $144</p>
+        <p class="antes">Antes: $229</p>
+        <p>18 cuotas: $9.05</p>
+        <button class="boton-agregar">Agregar al carrito</button>
+    </div>
+
+    <!-- 6 conjunto de armarios -->
+    <div class="armario">
+        <div class="descuento">-23%</div>
+        <h2>Armario Havana Star| Blanco 5r</h2>
+        <img src="imagenes/armarios/ArmarioHavanaStar.webp" alt="Armario Havana Star">
+        <p class="oferta">Oferta web: $99</p>
+        <p class="antes">Antes: $129</p>
+        <p>6 cuotas: $17.28</p>
+        <button class="boton-agregar">Agregar al carrito</button>
+    </div>
+
+    <!-- 7 conjunto de armarios -->
+    <div class="armario">
+        <div class="descuento">-30%</div>
+        <h2>Armario Chile| Blanco 4.2</h2>
+        <img src="imagenes/armarios/ArmarioChile.webp" alt="Armario Chile">
+        <p class="oferta">Oferta web: $154</p>
+        <p class="antes">Antes: $219</p>
+        <p>18 cuotas: $9.68</p>
+        <button class="boton-agregar">Agregar al carrito</button>
+    </div>
+
+    <!-- 8 conjunto de armarios -->
+    <div class="armario">
+        <div class="descuento">-30%</div>
+        <h2>Armario Chile| Castaño Wood 4.2</h2>
+        <img src="imagenes/armarios/ArmarioChileCastaño.webp" alt="Armario Chile Castaño">
+        <p class="oferta">Oferta web: $154</p>
+        <p class="antes">Antes: $219</p>
+        <p>18 cuotas: $9.68</p>
+        <button class="boton-agregar">Agregar al carrito</button>
+    </div>
+
+    <!-- 9 conjunto de armarios -->
+    <div class="armario">
+        <div class="descuento">-25%</div>
+        <h2>Armario Caioba| Castaño Blanco</h2>
+        <img src="imagenes/armarios/ArmarioCaioba.webp" alt="Armario Caioba">
+        <p class="oferta">Oferta web: $214</p>
+        <p class="antes">Antes: $284</p>
+        <p>18 cuotas: $13.45</p>
+        <button class="boton-agregar">Agregar al carrito</button>
+    </div>
+
+    <!-- 10 conjunto de armarios -->
+    <div class="armario">
+        <div class="descuento">-36%</div>
+        <h2>Armario Panamá| Castaño Wood 6.2</h2>
+        <img src="imagenes/armarios/ArmarioPanamaCastaño.webp" alt="Armario Panama Castaño">
+        <p class="oferta">Oferta web: $189</p>
+        <p class="antes">Antes: $294</p>
+        <p>18 cuotas: $11.88</p>
+        <button class="boton-agregar">Agregar al carrito</button>
+    </div>
+
+    <!-- 11 conjunto de armarios -->
+    <div class="armario">
+        <div class="descuento">-20%</div>
+        <h2>Armario Perú| Castaño Wood 5.3</h2>
+        <img src="imagenes/armarios/ArmarioPeru.webp" alt="Armario Peru">
+        <p class="oferta">Oferta web: $229</p>
+        <p class="antes">Antes: $374</p>
+        <p>18 cuotas: $18.79</p>
+        <button class="boton-agregar">Agregar al carrito</button>
+    </div>
+
+    <!-- 12 conjunto de armarios -->
+    <div class="armario">
+        <div class="descuento">-20%</div>
+        <h2>Armario Havana Star| Castaño Blanco</h2>
+        <img src="imagenes/armarios/ArmarioHavanaStarCastaño.webp" alt="Armario Havana Star Castaño">
+        <p class="oferta">Oferta web: $283</p>
+        <p class="antes">Antes: $354</p>
+        <p>18 cuotas: $17.80</p>
+        <button class="boton-agregar">Agregar al carrito</button>
+    </div>
+
+    <!-- 13 ejemplo: Disponible en tienda -->
+    <div class="armario">
+        <h2>Armario Havana Master| Castaño</h2>
+        <img src="imagenes/armarios/ArmarioHavanaMaster.webp" alt="Armario Havana Master">
+        <button class="boton-tienda">Disponible en tiendas</button>
+    </div>
+
+    <!-- 14 ejemplo: Disponible en tienda -->
+    <div class="armario">
+        <h2>Armario Lima| Blanco 3.2</h2>
+        <img src="imagenes/armarios/ArmarioLima.webp" alt="Armario Lima">
+        <button class="boton-tienda">Disponible en tiendas</button>
+    </div>
+
+    <!-- 15 ejemplo: Disponible en tienda -->
+    <div class="armario">
+        <h2>Armario Click| Blanco 3.9</h2>
+        <img src="imagenes/armarios/ArmarioClick.webp" alt="Armario Click">
+        <button class="boton-tienda">Disponible en tiendas</button>
+    </div>
+</div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <img class="logo" alt="logo-empresa" src="imagenes/EL-sapito.webp">
+        <nav class="footernav">
+            <ul>
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="muebles.html">Muebles</a></li>
+                <li><a href="comedores.html">Comedores</a></li>
+                <li><a href="armario.html">Armarios</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+        <p class="desarrollado">Copyright &copy;2023 Diseñado por el Grupo 7</p>
+    </footer>
+</body>
+</html>

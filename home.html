@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Revelo Quintana Jose">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="imagenes/EL-sapito.webp">
+    <title>Inicio|EL SAPITO</title>
+    <style>
+    .slider {
+        overflow: hidden;
+        margin-bottom: 15px;
+    }
+
+    .slides {
+        display: flex;
+        transition: all 1s;
+    }
+
+    .slide {
+        flex: 0 0 100%;
+        height: 100%;
+    }
+
+    #slide1:checked ~ .slides {
+        transform: translateX(0);
+    }
+
+    #slide2:checked ~ .slides {
+        transform: translateX(-100%);
+    }
+
+    #slide3:checked ~ .slides {
+        transform: translateX(-200%);
+    }
+
+    #slide4:checked ~ .slides {
+        transform: translateX(-300%);
+    }
+
+    .slide-image {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .slider-nav {
+        text-align: center;
+    }
+
+    .slider-nav label {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background: #666;
+        border-radius: 50%;
+        cursor: pointer;
+        margin: 0 5px;
+    }
+
+    #slide1:checked ~ .slider-nav label:nth-child(1),
+    #slide2:checked ~ .slider-nav label:nth-child(2),
+    #slide3:checked ~ .slider-nav label:nth-child(3),
+    #slide4:checked ~ .slider-nav label:nth-child(4) {
+        background: #333;
+    }
+
+    input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    .column {
+        flex: 1;
+        text-align: center;
+        padding: 0;
+        border: 1px solid #ccc;
+        margin: 0 10px 0 10px;
+        background-color: #379734;
+    }
+
+    .column a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        font-size: 20px;
+        display: block;
+    }
+
+    .column a:hover {
+        color: #ffffff;
+    }
+
+    .column img {
+        width: 100%; /* Ajusta el tamaño de la imagen según tus necesidades */
+        height: 100%;
+        margin-bottom: -35px;
+    }
+
+    .column-services{
+        margin: 0;
+    }
+
+    #container-mision {
+        display: flex;
+        margin: 5px;
+    }
+
+    #content {
+        flex: 1;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #mission, #vision {
+        margin-bottom: 20px;
+    }
+
+    #image {
+        flex: 1;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    #mision-imagen{
+        height: 350px;
+    }
+
+    .imagen-seguidores{
+        width: 100%;
+        height: 100%;
+    }
+
+    .container-cotizacion {
+        text-align: center;
+        padding: 30px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
+
+    .cotizacion-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border: none;
+        border-radius: 4px;
+        font-size: 30px;
+    }
+
+    .cotizacion-button:hover {
+        background-color: #45a049;
+    }
+
+    #countdown-container {
+        text-align: center;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+    }
+
+    #countdown {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    @media only screen and (max-width: 800px) {
+    .slider {
+        margin-top: 120px; /* Adjust margin for smaller screens */
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+    }
+
+    .column {
+        margin: 10px 0;
+    }
+
+    .column img {
+        margin-bottom: 0;
+    }
+
+    #container-mision {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #content {
+        padding: 10px;
+    }
+
+    #image {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #mision-imagen {
+        height: auto;
+        width: 100%;
+    }
+
+    .container-cotizacion {
+        grid-template-columns: 1fr;
+    }
+
+    .cotizacion-button {
+        font-size: 20px;
+    }
+
+    .seguidores {
+        margin: 20px 0;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="home.html" class="empresa">
+            <img class="logo" alt="logo-empresa" src="imagenes/EL-sapito.webp">
+            <h2 class="nombre-empresa">Muebleria El sapito</h2>
+        </a>
+        <nav class="nav-item">
+            <a href="home.html" class="headeritem">Inicio</a>
+            <a href="muebles.html" class="headeritem">Muebles</a>
+            <a href="comedores.html" class="headeritem">Comedores</a>
+            <a href="armario.html" class="headeritem">Armarios</a>
+            <a href="pedidoproducto.html" class="headeritem">Pedido Personalizado</a>
+            <a href="ingreso.html" class="headeritem">Iniciar Sesion</a>
+            <a href="carrito.html" class="carrito">
+                <img class="carrocompra" alt="carrito-compra" src="imagenes/carrito-de-compra.webp">
+            </a>
+        </nav>
+    </header>
+
+    <div id="countdown-container">
+        <p>¡BLACK FRIDAY! Oferta válida hasta el 30 de noviembre de 2023:</p>
+        <div id="countdown"></div>
+    </div>
+
+    <div class="slider">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+
+        <div class="slides">
+            <div class="slide">
+                <img class="slide-image" src="imagenes/inicio/2.webp" alt="Imagen 1">
+            </div>
+            <div class="slide">
+                <img class="slide-image" src="imagenes/inicio/202307-Slider-Espacity-Living-1.webp" alt="Imagen 2">
+            </div>
+            <div class="slide">
+                <img class="slide-image" src="imagenes/inicio/maxresdefault.webp" alt="Imagen 3">
+            </div>
+            <div class="slide">
+                <img class="slide-image" src="imagenes/inicio/Slide_shopify_dizzains_3-02.webp" alt="Imagen 4">
+            </div>
+        </div>
+
+        <div class="slider-nav">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+        </div>
+    </div>
+
+    
+    
+    <div class="container">
+        <div class="column">
+            <a href="muebles.html">
+                <img src="imagenes/inicio/muebles.webp" alt="Muebles">
+                <h2 class="column-services">Muebles</h2>
+            </a>
+        </div>
+        <div class="column">
+            <a href="comedores.html">
+                <img src="imagenes/inicio/Comedores.webp" alt="Comedores">
+                <h2 class="column-services">Comedores</h2>
+            </a>
+        </div>
+        <div class="column">
+            <a href="armario.html">
+                <img src="imagenes/inicio/armario.webp" alt="Armarios">
+                <h2 class="column-services">Armarios</h2>
+            </a>
+        </div>
+    </div>
+
+    <div id="container-mision">
+        <div id="content">
+            <h1>Misión</h1>
+            <p id="mission">
+                En nuestra empresa de mueblería, nos comprometemos a ofrecer productos de alta calidad que mejoren la vida diaria de nuestros clientes. Nos esforzamos por superar las expectativas mediante la creación y entrega de mobiliario innovador y elegante, combinando diseño creativo, artesanía experta y materiales duraderos. Nuestro objetivo es proporcionar soluciones de decoración integral que transformen espacios en entornos acogedores y funcionales, asegurando la satisfacción total de quienes confían en nosotros para dar vida a sus ambientes soñados.
+            </p>
+            <h1>Visión</h1>
+            <p id="vision">
+                Ser la principal fuente de inspiración para hogares y espacios comerciales, proporcionando soluciones de mobiliario excepcionales que reflejen estilo, funcionalidad y calidad incomparables. Aspiramos a enriquecer la vida de nuestros clientes mediante la creación de ambientes que inspiren comodidad, elegancia y bienestar en cada rincón del mundo.
+            </p>
+        </div>
+        <div id="image">
+            <img id="mision-imagen" src="imagenes/inicio/mision-vision.webp" alt="Imagen de la empresa">
+        </div>
+    </div>
+
+    <div class="container-cotizacion">
+        <a id="cotizacion" class="cotizacion-button" href="cotizacion.html">Obtener Cotización</a>
+        <a id="pedido" class="cotizacion-button" href="pedidoproducto.html">Pedido de productos</a>
+        <a id="feed" class="cotizacion-button" href="feedback.html">Feedback</a>
+    </div>
+
+    <div class="seguidores">
+        <img class="imagen-seguidores" src="imagenes/inicio/seguidores.webp" alt="">
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <img class="logo" alt="logo-empresa" src="imagenes/EL-sapito.webp">
+        <nav class="footernav">
+            <ul>
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="muebles.html">Muebles</a></li>
+                <li><a href="comedores.html">Comedores</a></li>
+                <li><a href="armario.html">Armarios</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+        <p class="desarrollado">Copyright &copy;2023 Diseñado por el Grupo 7</p>
+    </footer>
+
+    <script>
+        // Obtén la fecha actual y la fecha límite para la promoción
+        var currentDate = new Date();
+        var promotionDeadline = new Date('2023-11-30T23:59:59');
+    
+        // Calcula la diferencia en milisegundos entre las dos fechas
+        var timeDifference = promotionDeadline.getTime() - currentDate.getTime();
+    
+        // Calcula días, horas, minutos y segundos restantes
+        var daysRemaining = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        var hoursRemaining = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutesRemaining = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        var secondsRemaining = Math.floor((timeDifference % (1000 * 60)) / 1000);
+    
+        // Función para actualizar el contador cada segundo
+        function updateCountdown() {
+            document.getElementById('countdown').innerHTML = daysRemaining + 'd ' + hoursRemaining + 'h ' + minutesRemaining + 'm ' + secondsRemaining + 's ';
+    
+            // Actualiza las variables de tiempo restante
+            daysRemaining = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            hoursRemaining = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            minutesRemaining = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            secondsRemaining = Math.floor((timeDifference % (1000 * 60)) / 1000);
+    
+            // Actualiza la diferencia de tiempo
+            timeDifference -= 1000;
+    
+            // Si la promoción ha terminado, detén la cuenta regresiva
+            if (timeDifference < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById('countdown').innerHTML = 'La promoción ha terminado.';
+            }
+        }
+    
+        // Llama a la función de actualización cada segundo
+        var countdownInterval = setInterval(updateCountdown, 1000);
+    </script>
+    
+</body>
+</html>

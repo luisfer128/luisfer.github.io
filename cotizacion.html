@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Cedeño Paredes Romina">
+    <title>Cotizacion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="imagenes/EL-sapito.webp">
+    <style>
+        .form-register {
+            max-width: 400px;
+            background: burlywood;
+            margin: auto;
+            padding: 30px;
+            margin-top: 100px;
+            margin-block-end: 100px;
+            border-radius: 4px;
+        }
+
+        .controls{
+            width: 100%;
+            padding: 6px;
+        }
+
+        .principal{
+            font-size: larger;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+
+        label, input, select {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        label{
+            font-family:Georgia, 'Times New Roman', Times, serif
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="home.html" class="empresa">
+            <img class="logo" alt="logo-empresa" src="imagenes/EL-sapito.webp">
+            <h2 class="nombre-empresa">Muebleria El sapito</h2>
+        </a>
+        <nav class="nav-item">
+            <a href="home.html" class="headeritem">Inicio</a>
+            <a href="muebles.html" class="headeritem">Muebles</a>
+            <a href="comedores.html" class="headeritem">Comedores</a>
+            <a href="armario.html" class="headeritem">Armarios</a>
+            <a href="pedidoproducto.html" class="headeritem">Pedido Personalizado</a>
+            <a href="ingreso.html" class="headeritem">Iniciar Sesion</a>
+            <a href="carrito.html" class="carrito">
+                <img class="carrocompra" alt="carrito-compra" src="imagenes/carrito-de-compra.webp">
+            </a>
+        </nav>
+    </header>
+    
+    <div class="form-register">
+        <h1>Formulario de Cotización</h1>
+        <form action="#" method="post">
+            <label class="principal" for="nombre">Nombre:</label>
+            <input class="controls" type="text" id="nombre" name="nombre" required>
+
+            <label class="principal" for="apellido">Apellido:</label>
+            <input class="controls" type="text" id="apellido" name="apellido" required>
+
+            <label class="principal" for="correo">Correo electrónico:</label>
+            <input class="controls" type="email" id="correo" name="correo" required>
+
+            <label class="principal" for="cedula">Cédula:</label>
+            <input class="controls" type="number" id="cedula" name="cedula" required>
+
+            <label class="principal" for="pais">Provincia:</label>
+            <select id="pais" name="pais">
+                <option value="seleccionar">Seleccionar</option>
+                <option value="gye">Guayas</option>
+                <option value="man">Manabí</option>
+                <option value="pich">Pichincha</option>
+                <option value="azuay">Azuay</option>
+                <option value="napo">Napo</option>
+                <option value="sucu">Sucumbios</option>
+            </select>
+
+            <label class="principal">Tipo de producto:</label>
+            <label>Juegos de muebles</label>
+            <input type="radio" name="tipo" value="muebles">
+
+            <label>Armarios</label>
+            <input type="radio" name="tipo" value="armario">
+
+            <label>Comedores</label>
+            <input type="radio" name="tipo" value="comedores">
+
+
+            <label class="principal">Modelo de producto:</label>
+            <label>Mueble de entrada</label>
+            <input type="checkbox" name="modelo" required> 
+
+            <label>Repisas decorativas</label>
+            <input type="checkbox" name="modelo" required>
+
+            <label>Comedor Burgos de 4 sillas</label>
+            <input type="checkbox" name="modelo" required>
+
+            <label>Comedor Génova de 4 sillas</label>
+            <input type="checkbox" name="modelo" required>
+
+            <label>Armario Panamá</label>
+            <input type="checkbox" name="modelo" required>
+
+            <label>Armario Brixton</label>
+            <input type="checkbox" name="modelo" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <img class="logo" alt="logo-empresa" src="imagenes/EL-sapito.webp">
+        <nav class="footernav">
+            <ul>
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="muebles.html">Muebles</a></li>
+                <li><a href="comedores.html">Comedores</a></li>
+                <li><a href="armario.html">Armarios</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+        <p class="desarrollado">Copyright &copy;2023 Diseñado por el Grupo 7</p>
+    </footer>
+</body>
+</html>
