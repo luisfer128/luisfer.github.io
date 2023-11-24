@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Revelo Quintana Jose">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="imagenes/EL-sapito.webp">
+    <title>Iniciar Sesion</title>
+    <style>
+    form {
+        margin: 0 auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1{
+        display: flex;
+        justify-content: center;
+        max-height: 50px;
+        padding: 50px;
+    }
+
+    .ingreso-form{
+        display: flex;
+        margin-bottom: 182px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"],
+    input[type="number"],
+    input[type="date"],
+    textarea,
+    select {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+
+    input[type="submit"] {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    .registro{
+        display: flex;
+        justify-content: end;
+        color: blue;
+    }
+
+    .registro:hover{
+        text-decoration: underline;
+    }
+
+    .container-registro{
+        margin-top: -30px;
+        margin-bottom: 10px;
+    }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="empresa">
+            <img class="logo" alt="logo-empresa" src="imagenes/EL-sapito.webp">
+            <h2 class="nombre-empresa">Muebleria El sapito</h2>
+        </a>
+        <nav class="nav-item">
+            <a href="index.html" class="headeritem">Inicio</a>
+            <a href="muebles.html" class="headeritem">Muebles</a>
+            <a href="comedores.html" class="headeritem">Comedores</a>
+            <a href="armario.html" class="headeritem">Armarios</a>
+            <a href="pedidoproducto.html" class="headeritem">Pedido Personalizado</a>
+            <a href="ingreso.html" class="headeritem">Iniciar Sesion</a>
+            <a href="carrito.html" class="carrito">
+                <img class="carrocompra" alt="carrito-compra" src="imagenes/carrito-de-compra.webp">
+            </a>
+        </nav>
+    </header>
+    <h1>Inicio de sesion</h1>
+    <div class="ingreso-form">
+        <form>
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" name="usuario"><br><br>
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena"><br><br>
+            <div class="container-registro">
+                <a href="recuperarcontra.html" class="registro">¿Olvidaste la contraseña?</a>
+                <a href="registro.html" class="registro">Registrarse</a>
+            </div>
+            <input type="submit" value="Ingresar">
+        </form>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <img class="logo" alt="logo-empresa" src="imagenes/EL-sapito.webp">
+        <nav class="footernav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="muebles.html">Muebles</a></li>
+                <li><a href="comedores.html">Comedores</a></li>
+                <li><a href="armario.html">Armarios</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+        <p class="desarrollado">Copyright &copy;2023 Diseñado por el Grupo 7</p>
+    </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var form = document.querySelector("form");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                // Obtener el valor del usuario y la contraseña
+                var usuario = document.getElementById("usuario").value;
+                var contrasena = document.getElementById("contrasena").value;
+
+                // Validar que los campos no estén vacíos (puedes agregar más validaciones según tus necesidades)
+                if (usuario.trim() === "" || contrasena.trim() === "") {
+                    alert("Por favor, ingrese el usuario y la contraseña.");
+                    return;
+                }
+
+                // Aquí podrías agregar lógica para verificar el usuario y la contraseña (simulado por ahora)
+                // En una aplicación real, esto se manejaría en el servidor
+                // Simplemente mostraremos un mensaje de éxito
+                alert("¡Ingreso exitoso! Bienvenido, " + usuario + "!");
+            });
+        });
+    </script>
+</body>
+</html>

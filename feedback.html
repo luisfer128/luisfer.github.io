@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Revelo Quintana Jose">
+    <title>Formulario Feedback</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="imagenes/EL-sapito.webp">
+    <style>
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+    }
+
+    h1{
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    input[type="number"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+
+    input[type="submit"] {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    /* Estilos para hacer la página responsive */
+    @media only screen and (max-width: 600px) {
+        form {
+            max-width: 300px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="empresa">
+            <img class="logo" alt="logo-empresa" src="imagenes/EL-sapito.webp">
+            <h2 class="nombre-empresa">Muebleria El sapito</h2>
+        </a>
+        <nav class="nav-item">
+            <a href="index.html" class="headeritem">Inicio</a>
+            <a href="muebles.html" class="headeritem">Muebles</a>
+            <a href="comedores.html" class="headeritem">Comedores</a>
+            <a href="armario.html" class="headeritem">Armarios</a>
+            <a href="pedidoproducto.html" class="headeritem">Pedido Personalizado</a>
+            <a href="ingreso.html" class="headeritem">Iniciar Sesion</a>
+            <a href="carrito.html" class="carrito">
+                <img class="carrocompra" alt="carrito-compra" src="imagenes/carrito-de-compra.webp">
+            </a>
+        </nav>
+    </header>
+
+    <h1>Formulario de Feedback</h1>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono"><br><br>
+        <label for="comentario">Comentario:</label>
+        <textarea id="comentario" name="comentario" rows="4" cols="50"></textarea><br><br>
+        <label for="puntaje">Puntaje:</label>
+        <input type="number" id="puntaje" name="puntaje" min="1" max="5"><br><br>
+        <label for="sugerencias">Sugerencias:</label>
+        <input type="text" id="sugerencias" name="sugerencias"><br><br>
+        <input type="submit" value="Enviar Feedback">
+    </form>
+
+    <!-- Footer -->
+    <footer>
+        <img class="logo" alt="logo-empresa" src="imagenes/EL-sapito.webp">
+        <nav class="footernav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="muebles.html">Muebles</a></li>
+                <li><a href="comedores.html">Comedores</a></li>
+                <li><a href="armario.html">Armarios</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+        <p class="desarrollado">Copyright &copy;2023 Diseñado por el Grupo 7</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var form = document.querySelector("form");
+    
+            form.addEventListener("submit", function (event) {
+                // Cancela el envío del formulario para manejar la validación manualmente
+                event.preventDefault();
+    
+                // Realiza la validación de cada campo
+                var nombre = document.getElementById("nombre").value;
+                var email = document.getElementById("email").value;
+                var telefono = document.getElementById("telefono").value;
+                var comentario = document.getElementById("comentario").value;
+                var puntaje = document.getElementById("puntaje").value;
+                var sugerencias = document.getElementById("sugerencias").value;
+    
+                // Validación de nombre: solo letras permitidas
+                var nombreRegex = /^[a-zA-Z\s]+$/;
+                if (!nombreRegex.test(nombre)) {
+                    alert("Ingrese un nombre válido (solo letras y espacios).");
+                    return;
+                }
+    
+                // Validación de email
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert("Ingrese un correo electrónico válido.");
+                    return;
+                }
+    
+                // Validación de teléfono: solo números permitidos
+                var telefonoRegex = /^\d+$/;
+                if (!telefonoRegex.test(telefono)) {
+                    alert("Ingrese un teléfono válido (solo números).");
+                    return;
+                }
+    
+                // Validación de comentario: al menos 5 caracteres
+                if (comentario.length < 5) {
+                    alert("Ingrese un comentario válido (al menos 5 caracteres).");
+                    return;
+                }
+    
+                // Validación de puntaje: debe estar entre 1 y 5
+                if (puntaje < 1 || puntaje > 5) {
+                    alert("Ingrese un puntaje válido (entre 1 y 5).");
+                    return;
+                }
+    
+                // Validación de sugerencias: al menos 10 caracteres
+                if (sugerencias.length < 10) {
+                    alert("Ingrese sugerencias válidas (al menos 10 caracteres).");
+                    return;
+                }
+    
+                // Si todo está validado, puedes enviar el formulario aquí
+                alert("Formulario enviado con éxito!");
+                // form.submit(); // Descomenta esta línea para enviar el formulario realmente
+            });
+        });
+    </script>  
+</body>
+</html>
